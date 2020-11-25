@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: Administrator
+Build-Jdk: 11.0.2
+Implementation-Title: SpringBootDemo
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: top.sogrey
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootDemo
+ /
+Created-By: Maven Integration for Eclipse
+
