@@ -1,0 +1,21 @@
+2020-11-27 16:43:40,021 INFO  - Installing service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)'...
+2020-11-27 16:43:40,050 INFO  - Service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)' was installed successfully.
+2020-11-27 16:43:40,469 DEBUG - Starting WinSW in service mode.
+2020-11-27 16:43:40,507 INFO  - Starting java
+2020-11-27 16:43:40,608 INFO  - Started process java (15272).
+2020-11-27 16:43:40,626 INFO  - Service started successfully.
+2020-11-27 16:43:52,966 INFO  - Stopping SpringBootDemo-0.0.1-SNAPSHOT
+2020-11-27 16:43:52,968 DEBUG - ProcessKill 15272
+2020-11-27 16:43:53,036 INFO  - Child process 'java (15272)' canceled with code -1073741510.
+2020-11-27 16:43:53,052 INFO  - Finished SpringBootDemo-0.0.1-SNAPSHOT
+2020-11-27 16:43:53,053 INFO  - Service stopped successfully.
+2020-11-27 16:43:55,772 INFO  - Uninstalling service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)'...
+2020-11-27 16:43:55,792 INFO  - Service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)' was uninstalled successfully.
+2020-11-27 18:09:20,025 INFO  - Uninstalling service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)'...
+2020-11-27 18:09:20,043 WARN  - Service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)' does not exist.
+2020-11-27 18:09:50,170 INFO  - Installing service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)'...
+2020-11-27 18:09:50,198 INFO  - Service 'SpringBootDemo-0.0.1-SNAPSHOT (SpringBootDemo-0.0.1-SNAPSHOT)' was installed successfully.
+2020-11-27 18:09:50,564 DEBUG - Starting WinSW in service mode.
+2020-11-27 18:09:50,600 INFO  - Starting java
+2020-11-27 18:09:50,841 INFO  - Started process java (8820).
+2020-11-27 18:09:50,855 INFO  - Service started successfully.
