@@ -118,6 +118,7 @@ public class HelloController {
 			}
 			System.out.println("sb:" + sb.toString());
 			System.out.println("callCmd execute finished");
+			closeStream(bufferedReader);
 		} catch (IOException e) {
 			System.out.println(e);
 			sb.append(e.getMessage());
@@ -154,13 +155,13 @@ public class HelloController {
 //		String shellPath = request.getServletContext().getRealPath("/") + "WEB-INF/classes";
 //		String cmd = shellPath + "/copyDB.sh " + dir + " " + targetPath;
 //		ProcessBuilder builder = new ProcessBuilder("/bin/sh", "-c", cmd);
-//		builder.directory(new File(shellPath));
+//		builder.directory(new File(shellPath));//切换到工作目录
 //
 //		int runningStatus = 0;
 //		String s = null;
 //		StringBuffer sb = new StringBuffer();
 //		try {
-//			Process p = builder.start();
+//			Process p = builder.start();//启动脚本
 //
 //			BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
 //			BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
@@ -201,7 +202,7 @@ public class HelloController {
 //		}
 //	}
 
-	private void closeStream(BufferedReader reader) {
+	private static void closeStream(BufferedReader reader) {
 		try {
 			if (reader != null) {
 				reader.close();
