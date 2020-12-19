@@ -40,7 +40,7 @@ public class HelloController {
 
 	@RequestMapping("/runSHW")
 	@ResponseBody
-	public String runSH(int cmdType) {// String shellPath, String name
+	public String runSH(String shName) {// String shellPath, String name,int cmdType
 //		StringBuffer sb = new StringBuffer();
 //		try {
 //			String shpath = "./run.sh";
@@ -61,21 +61,21 @@ public class HelloController {
 		String systemType = env.getProperty("systemType");
 
 		String batPath = "D:/project/demos/runw.bat"; // 把你的bat脚本路径写在这里
-		if ("linux".equals(systemType)) {
-			batPath = "run.sh";
-		}
+//		if ("linux".equals(systemType)) {
+			batPath = "getTifValue.sh";
+//		}
 		File batFile = new File(batPath);
 		boolean batFileExist = batFile.exists();
 		System.out.println("batFileExist:" + batFileExist);
 		String result = "---";
 		if (batFileExist) {
-			result = callCmd(batPath, systemType, cmdType);
+			result = callCmd(batPath, systemType,shName);
 		}
 		System.out.println("result:" + result);
 		return result;
 	}
 
-	private static String callCmd(String locationCmd, String systemType, int cmdType) {
+	private static String callCmd(String locationCmd, String systemType,String shName) {
 		StringBuilder sb = new StringBuilder();
 		String cmdPre = "";
 		try {
@@ -85,25 +85,26 @@ public class HelloController {
 //				cmdPre = "/bin/sh ";
 				cmdPre = "bash ";
 			} else {
-				switch (cmdType) {
-				case 1:
-					cmdPre = "cmd /c ";// 执行完dir命令后关闭命令窗口
-					break;
-				case 2:
-					cmdPre = "cmd /k ";// 执行完dir命令后不关闭命令窗口
-					break;
-				case 3:
-					cmdPre = "cmd /c start ";// 会打开一个新窗口后执行dir指令, 原窗口会关闭
-					break;
-				case 4:
-					cmdPre = "cmd /k start ";// 会打开一个新窗口后执行dir指令, 原窗口不会关闭
-					break;
-
-				default:
-					break;
-				}
+				cmdPre = "bash ";// .sh
+//				switch (cmdType) {// .bat
+//				case 1:
+//					cmdPre = "cmd /c ";// 执行完dir命令后关闭命令窗口
+//					break;
+//				case 2:
+//					cmdPre = "cmd /k ";// 执行完dir命令后不关闭命令窗口
+//					break;
+//				case 3:
+//					cmdPre = "cmd /c start ";// 会打开一个新窗口后执行dir指令, 原窗口会关闭
+//					break;
+//				case 4:
+//					cmdPre = "cmd /k start ";// 会打开一个新窗口后执行dir指令, 原窗口不会关闭
+//					break;
+//
+//				default:
+//					break;
+//				}
 			}
-			Process child = Runtime.getRuntime().exec(cmdPre + locationCmd);
+			Process child = Runtime.getRuntime().exec(cmdPre + locationCmd + " "+shName);
 			InputStream in = child.getInputStream();
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
 			String line;
@@ -201,7 +202,8 @@ public class HelloController {
 //			return result.toJSONString();
 //		}
 //	}
-
+//	https://www.jianshu.com/p/06158611c539
+//	https://www.yuque.com/docs/share/86e3fa77-39f5-4362-b809-a3c161370bcc
 	private static void closeStream(BufferedReader reader) {
 		try {
 			if (reader != null) {
