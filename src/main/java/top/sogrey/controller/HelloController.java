@@ -13,6 +13,7 @@ import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,6 +21,7 @@ import top.sogrey.interfaces.AccessLimit;
 import top.sogrey.models.ResponseResult;
 
 @Controller // 标明这是一个SpringMVC的Controller控制器
+@CrossOrigin
 @RequestMapping(value = "/api")
 public class HelloController {
 	@Autowired
@@ -27,6 +29,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	@ResponseBody
+	@CrossOrigin
 	public String hello() {
 		return "hello world";
 	}
