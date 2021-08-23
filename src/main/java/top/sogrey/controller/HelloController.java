@@ -43,7 +43,8 @@ public class HelloController {
 
 	@RequestMapping("/runSHW")
 	@ResponseBody
-	public String runSH(String shName) {// String shellPath, String name,int cmdType
+	public String runSH(String shName) {
+		// String shellPath, String name,int cmdType
 //		StringBuffer sb = new StringBuffer();
 //		try {
 //			String shpath = "./run.sh";
