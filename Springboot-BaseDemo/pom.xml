@@ -34,12 +34,8 @@
 				<configuration>
 					<mainClass>top.sogrey.HelloApplication</mainClass>
 					<layout>ZIP</layout>
-					<!-- <includes>
-						<include>
-							<groupId>nothing</groupId>
-							<artifactId>nothing</artifactId>
-						</include>
-					</includes> -->
+					<!-- <includes> <include> <groupId>nothing</groupId> <artifactId>nothing</artifactId> 
+						</include> </includes> -->
 				</configuration>
 			</plugin>
 		</plugins>
