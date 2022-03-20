@@ -19,7 +19,7 @@ echo -e "\033[32;40m [1] \033[0m commit 2 main branch"
 
 git init
 git add -A
-git commit -m '💖 '${1}
+git commit -m "💖 ${1}."
 
 # 如果你想要部署到 https://USERNAME.github.io
 git push -f git@github.com:Sogrey/SpringBootDemo.git main
