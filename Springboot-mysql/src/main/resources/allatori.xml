@@ -24,6 +24,9 @@
         <class template="class *jni*" />
         <class template="class *alibaba*"/>
         <class template="class *persistence*"/>
+        <!-- 排除业务类 -->
+        <class template="class top.sogrey.*.model.*" />
+        <!-- <class template="class top.sogrey.*.controller.*" />-->
     </ignore-classes>
 
     <!-- 到期时间(到期后无法启动jar) 格式：yyyy/mm/dd-->
