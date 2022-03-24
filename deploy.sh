@@ -22,6 +22,6 @@ git add -A
 git commit -m "💖 ${1}."
 
 # 如果你想要部署到 https://USERNAME.github.io
-git push -f git@github.com:Sogrey/SpringBootDemo.git main
+git push -f git@github.com:Sogrey/Springboot-template.git main
 
 echo -e "\033[32;40m done \033[0m "
